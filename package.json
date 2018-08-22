@@ -1,0 +1,38 @@
+{
+  "name": "gatsby-v2-starter",
+  "description": "Gatsby v2 starter styled with Tailwind",
+  "version": "0.0.1",
+  "author": "Roger Erik Tinch <ret@tinch.co> and Taylor Bryant <taylor@bryant.io>",
+  "dependencies": {
+    "gatsby": "next",
+    "gatsby-plugin-manifest": "next",
+    "gatsby-plugin-offline": "next",
+    "gatsby-plugin-react-helmet": "next",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0"
+  },
+  "keywords": [
+    "gatsby",
+    "tailwind",
+    "tailwindcss",
+    "purgecss"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build:css": "tailwind build ./src/css/tailwind.css -c ./tailwind.config.js -o ./src/css/app.css",
+    "build": "npm run build:css && purgecss -c ./purgecss.config.js -o ./src/css && gatsby build",
+    "develop": "npm run build:css && gatsby develop",
+    "format": "prettier --write src/**/*.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "^1.14.2",
+    "purgecss": "^1.1.0",
+    "tailwindcss": "^0.6.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  }
+}
